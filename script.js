@@ -26,25 +26,27 @@ function setSunTimeParagraph(sunTime, milliSeconds) {
 }
 
 function setWeatherClass(weatherClass) {
-  switch (weatherClass) {
-    case "clear":
-      container.classList.toggle("clear");
-      setImgSrc("sunglasses");
-      weatherText.innerText = `${SUNNY_MESSAGE}`;
-      break;
-    case "rain":
-      container.classList.toggle("rain");
-      setImgSrc("umbrella");
-      weatherText.innerText = `${RAINY_MESSAGE}`;
-      break;
-    case "cloudy":
-      container.classList.toggle("cloudy");
-      setImgSrc("cloud");
-      weatherText.innerText = `${CLOUDY_MESSAGE}`;
-      break;
-    default:
-      container.classList.toggle("default");
-  }
+	switch (weatherClass) {
+		case "clear":
+			container.classList.toggle("clear");
+			setImgSrc("sunglasses");
+			weatherText.innerText = `${SUNNY_MESSAGE}`;
+			break;
+		case "rain":
+			container.classList.toggle("rain");
+			setImgSrc("umbrella");
+			weatherText.innerText = `${RAINY_MESSAGE}`;
+			break;
+		case "cloudy":
+		case "clouds":
+			container.classList.toggle("cloudy");
+			setImgSrc("cloud");
+			weatherText.innerText = `${CLOUDY_MESSAGE}`;
+			break;
+
+		default:
+			container.classList.toggle("default");
+	}
 }
 
 async function getWeather() {
