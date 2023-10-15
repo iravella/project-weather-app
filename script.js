@@ -7,6 +7,7 @@ const currentWeather = document.getElementById("currentWeather");
 const weatherImg = document.getElementById("weatherImg");
 const weatherText = document.getElementById("weatherText");
 const forecastContainer = document.getElementById("forecast-container");
+const cityInput = document.getElementById("cityInput");
 
 function setImgSrc(src) {
 	weatherImg.src = `img/${src}.svg`;
@@ -75,7 +76,7 @@ async function getWeather(city) {
 	} catch (err) {
 		console.error(err);
 		setImgSrc("");
-		weatherText.innerText = "Unvalid City, try again";
+		weatherText.innerText = "Invalid City, try again";
 		currentWeather.innerHTML = "Unable to load weather";
 	}
 }
@@ -125,4 +126,5 @@ function displayCityWeather(e) {
 	city = form.get("city").toLowerCase();
 	getForecast(city);
 	getWeather(city);
+	cityInput.value = ""; 
 }
