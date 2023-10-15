@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather app</title>
+		<link rel="stylesheet" href="./style.css" />
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+		</style>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather app</title>
-  <link rel="stylesheet" href="./style.css" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat");
-  </style>
-</head>
-
-<body>
-  <div id="container">
-    <!-- div to present weather -->
-    <div id="currentWeather"></div>
-    <div id="weatherInfo">
-      <img id="weatherImg" src="" alt="" />
-      <p id="weatherText"></p>
-    </div>
-    <div id="forecast-container">
-      <ul></ul>
-    </div>
-    <!-- div to present search bar -->
-    <div>
-      <form id="searchForm">
-        <input type="text" id="searchInput" placeholder="Search for City.." name="city">
-        <button type="submit" id="searchButton">Search</button>
-      </form>
-    </div>
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+	<body>
+		<div id="container">
+			<!-- div to present weather -->
+			<div id="currentWeather"></div>
+			<div id="weatherInfo">
+				<img id="weatherImg" src="" alt="" />
+				<p id="weatherText"></p>
+			</div>
+			<div id="forecast-container">
+				<ul></ul>
+			</div>
+			<!-- div to present search bar -->
+			<div id="searchContainer">
+				<form action="" id="searchForm" onsubmit="displayCityWeather(event)">
+					<input type="text" name="city" placeholder="Change city" />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
 </html>
