@@ -9,6 +9,7 @@
 			@import url("https://fonts.googleapis.com/css2?family=Montserrat");
 		</style>
 	</head>
+
 	<body>
 		<div id="container">
 			<!-- div to present weather -->
@@ -21,7 +22,12 @@
 				<ul></ul>
 			</div>
 			<!-- div to present search bar -->
-			<div></div>
+			<div id="searchContainer">
+				<form action="" id="searchForm" onsubmit="displayCityWeather(event)">
+					<input type="text" name="city" id ="cityInput" placeholder="Change city" />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
 		</div>
 		<script src="./script.js"></script>
 	</body>
